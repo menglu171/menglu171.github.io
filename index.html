@@ -12,9 +12,10 @@
     </style>
     <script>
         function checkPassword() {
-            const password = prompt("Enter the password:");
-            if (password === "accessml") {
-                document.body.style.display = "block"; // Show content if password is correct
+            const correctPassword = "accessml"; // Set your password here
+            const userInput = prompt("Enter the password:").trim(); // Get input and remove extra spaces
+            if (userInput === correctPassword) {
+                document.body.style.display = "block"; // Show content if the password matches
             } else {
                 alert("Incorrect password. Access denied.");
                 window.location.href = "https://example.com"; // Redirect unauthorized users
